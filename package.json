@@ -1,0 +1,22 @@
+{
+  "name": "n320lectures",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./week2/index.js",
+    "func": "node ./week2/functions/index.js",
+    "continue": "node ./week2/continue.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crosby7/n320Lectures.git"
+  },
+  "author": "Cameron Crosby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crosby7/n320Lectures/issues"
+  },
+  "homepage": "https://github.com/crosby7/n320Lectures#readme",
+  "description": ""
+}
