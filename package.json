@@ -4,9 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./week2/index.js",
-    "func": "node ./week2/functions/index.js",
-    "continue": "node ./week2/continue.js"
+    "start": "node ./week4-scaffold/index.js",
+    "func": "node ./week4-scaffold/functions/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,8 @@
     "url": "https://github.com/crosby7/n320Lectures/issues"
   },
   "homepage": "https://github.com/crosby7/n320Lectures#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "n320-create-cam-app": "^1.1.3"
+  }
 }
