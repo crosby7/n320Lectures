@@ -14,9 +14,28 @@ const WebFile = require("./functions/webfile");
  */
 function app(req, res) {
   const fileReq = new WebFile(req.url);
+  const filePath = path.join(__dirname, "views", fileReq.filename);
 
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.write("<h1>Welcome to my server</h1>");
+  // Cleanup: get contentType before conditionals
+  const contentType =
+    fs.existsSync(filePath) && fileReq.getExtension()
+      ? fileReq.getMimeType()
+      : "text/html";
+
+  res.writeHead(200, { "Content-Type": contentType });
+
+  if (fs.existsSync(filePath) && fileReq.getExtension()) {
+    res.write(fs.readFileSync(filePath));
+  } else if (
+    !fileReq.getExtension() &&
+    fs.existsSync(path.join(filePath, "index.html"))
+  ) {
+    res.write(fs.readFileSync(path.join(filePath, "index.html")));
+  } else if (!fileReq.getExtension() && fs.existsSync(filePath + ".html")) {
+    res.write(fs.readFileSync(filePath + ".html"));
+  } else {
+    res.write(fs.readFileSync(path.join(__dirname, "views", "404.html")));
+  }
   res.end();
 }
 
