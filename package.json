@@ -19,6 +19,7 @@
   "homepage": "https://github.com/crosby7/n320Lectures#readme",
   "description": "",
   "dependencies": {
-    "n320-create-cam-app": "^1.1.3"
+    "jspdf": "^2.5.2",
+    "n320-create-cam-app": "^2.0.1"
   }
 }
