@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+  font-family: monospace;
+}
+
+nav {
+  background-color: blanchedalmond;
+
+  font-family: monospace;
+  font-size: 28px;
+
+  padding-left: 3rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    min-height: 80px;
+
+    li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+main {
+  padding: 3rem;
+}

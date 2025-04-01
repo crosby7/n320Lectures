@@ -1,13 +1,17 @@
+// built-in modules
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
+// npm modules
+
+// custom modules
 const WebFile = require("./functions/webfile");
 
-let serverHits = 0;
+//let serverHits = 0;
 
 function app(req, res) {
-  console.log(++serverHits, req.url);
+  //console.log(++serverHits, req.url);
 
   const reqWebFile = new WebFile(req.url);
 

@@ -1,4 +1,8 @@
+// built-in modules
 const path = require("path");
+
+// npm modules
+const mime = require("mime-types");
 
 class WebFile {
   filename = "";
@@ -34,8 +38,8 @@ class WebFile {
   }
 
   getMimeType() {
-    const fileExt = this.reqDetails.ext;
-    return WebFile.mimeTypes[fileExt] || "text/html";
+    const fileExt = this.reqResource;
+    return mime.lookup(fileExt) || "text/plain";
   }
 }
 

@@ -20,6 +20,7 @@
   "description": "",
   "dependencies": {
     "jspdf": "^2.5.2",
+    "mime-types": "^2.1.35",
     "n320-create-cam-app": "^2.0.1"
   }
 }
